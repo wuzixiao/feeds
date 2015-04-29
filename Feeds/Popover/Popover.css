@@ -1,12 +1,14 @@
 html, body {
-    background: transparent;
+    /*background: transparent;*/
 }
 body {
     font-family: Helvetica Neue;
     font-size: 13px;
     margin: 0;
     margin-top: 7px;
-    text-shadow: 0 1px 0 white;
+    background: #292e3b;
+    color: #51d05d;
+    /*text-shadow: 0 1px 0 white;*/
 }
 .title {
     /* Some feeds (like Github) include the title in the content as well, so let's hide that. */
