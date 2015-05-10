@@ -12,7 +12,7 @@ const int ddLogLevel = LOG_LEVEL_INFO;
 #define MAX_ITEMS 30
 #define MAX_GROWLS 3
 #define POPOVER_INTERVAL 0.5
-#define POPOVER_WIDTH 416
+#define POPOVER_WIDTH 700
 
 @interface AppDelegate () <NSApplicationDelegate, NSMenuDelegate, GrowlApplicationBridgeDelegate, NSUserNotificationCenterDelegate, NSAlertDelegate>
 @property (nonatomic, strong) IBOutlet NSMenu *menu;
@@ -80,7 +80,7 @@ const int ddLogLevel = LOG_LEVEL_INFO;
 
     self.popover = [[NSPopover alloc] init];
     [self.popover setContentViewController:[[NSViewController alloc] init]];
-    [self.popover setBehavior:NSPopoverBehaviorTransient];
+    [self.popover setBehavior:1];
     [self.popover setAnimates:NO];
     
     WebView *webView = [[WebView alloc] initWithFrame:NSZeroRect];
