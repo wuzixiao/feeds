@@ -383,7 +383,7 @@ const int ddLogLevel = LOG_LEVEL_INFO;
     }
     
     self.lastHighlightedItem = menuItem;
-}
+} 
 
 - (void)menu:(NSMenu *)theMenu willHighlightItem:(NSMenuItem *)menuItem {
 
@@ -409,10 +409,10 @@ const int ddLogLevel = LOG_LEVEL_INFO;
             [self.popover setContentSize:NSMakeSize(POPOVER_WIDTH, 100)];
         }
     }
-    else {
-        self.popoverTimer = nil;
-        [self.popover close];
-    }
+   // else {
+        //self.popoverTimer = nil;
+        //[self.popover close];
+    //}
 }
 
 - (void)showPopover:(NSTimer *)timer {
