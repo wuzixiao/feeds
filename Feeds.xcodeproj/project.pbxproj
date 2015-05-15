@@ -182,6 +182,7 @@
 		4DDB2F0218FF310500AD815D /* NSData+ObjectFromJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB2F0118FF310500AD815D /* NSData+ObjectFromJSONData.m */; };
 		4DDB2F05190002B600AD815D /* NSString+ObjectFromJSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB2F04190002B600AD815D /* NSString+ObjectFromJSONString.m */; };
 		4DDB2F08190002CB00AD815D /* NSDictionary+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB2F07190002CB00AD815D /* NSDictionary+JSONString.m */; };
+		E17116EB1B05F3E9007297EB /* ReaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17116EA1B05F3E9007297EB /* ReaderController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -433,6 +434,8 @@
 		4DDB2F04190002B600AD815D /* NSString+ObjectFromJSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ObjectFromJSONString.m"; sourceTree = "<group>"; };
 		4DDB2F06190002CB00AD815D /* NSDictionary+JSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONString.h"; sourceTree = "<group>"; };
 		4DDB2F07190002CB00AD815D /* NSDictionary+JSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONString.m"; sourceTree = "<group>"; };
+		E17116EA1B05F3E9007297EB /* ReaderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderController.m; sourceTree = "<group>"; };
+		E17116EC1B05F42D007297EB /* ReaderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReaderController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -811,6 +814,8 @@
 			children = (
 				01F616EF13AEAA2400EBB24E /* PreferencesController.h */,
 				01F616F013AEAA2500EBB24E /* PreferencesController.m */,
+				E17116EA1B05F3E9007297EB /* ReaderController.m */,
+				E17116EC1B05F42D007297EB /* ReaderController.h */,
 				01F616F113AEAA2600EBB24E /* PreferencesController.xib */,
 				01D7CB8A13B02F4A001B133A /* CreateAccountController.h */,
 				01D7CB8B13B02F4A001B133A /* CreateAccountController.m */,
@@ -1059,6 +1064,7 @@
 				0133CEA61530974B00CF6647 /* NSAlert+Foreground.m in Sources */,
 				01BD35E2154D985200170BDD /* ZendeskAccount.m in Sources */,
 				012734BE15DFFB4E00512361 /* RSSAtomAccount.m in Sources */,
+				E17116EB1B05F3E9007297EB /* ReaderController.m in Sources */,
 				013BE6ED15E14F7E0002F51E /* DDFileLogger.m in Sources */,
 				4DDB2F08190002CB00AD815D /* NSDictionary+JSONString.m in Sources */,
 				013BE6EE15E14F7E0002F51E /* DDLog.m in Sources */,

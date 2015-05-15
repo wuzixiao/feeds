@@ -581,6 +581,10 @@ const int ddLogLevel = LOG_LEVEL_INFO;
 	[self.preferencesController showPreferences];
 }
 
+- (IBAction)openLargeReader:(id)sender {
+
+}
+
 -(IBAction)communitySupport:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://feedsapp.uservoice.com"]];
 }
