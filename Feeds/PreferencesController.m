@@ -5,6 +5,8 @@
 @interface PreferencesController () <NSToolbarDelegate, NSTabViewDelegate, NSTableViewDataSource, NSTableViewDelegate, NSMenuDelegate, CreateAccountControllerDelegate, AccountDelegate>
 @property (nonatomic, strong) IBOutlet NSToolbar *toolbar;
 @property (nonatomic, strong) IBOutlet NSTabView *tabView;
+
+
 @property (nonatomic, strong) IBOutlet NSTableView *tableView, *feedsTableView;
 @property (nonatomic, strong) IBOutlet NSButton *removeButton, *launchAtStartupButton, *hideDockIconButton;
 @property (nonatomic, strong) IBOutlet NSPopUpButton *notificationTypeButton, *refreshIntervalButton;

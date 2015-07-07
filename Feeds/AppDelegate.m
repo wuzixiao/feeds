@@ -1,5 +1,6 @@
 #import "AppDelegate.h"
 #import "PreferencesController.h"
+#import "NewReaderController.h"
 #import "StatusItemView.h"
 #import "Account.h"
 
@@ -17,12 +18,15 @@ const int ddLogLevel = LOG_LEVEL_INFO;
 @interface AppDelegate () <NSApplicationDelegate, NSMenuDelegate, GrowlApplicationBridgeDelegate, NSUserNotificationCenterDelegate, NSAlertDelegate>
 @property (nonatomic, strong) IBOutlet NSMenu *menu;
 @property (nonatomic, strong) IBOutlet NSMenuItem *markAllItemsAsReadItem;
+
+
 @property (nonatomic, strong) NSStatusItem *statusItem;
 @property (nonatomic, strong) StatusItemView *statusItemView;
 @property (nonatomic, strong) NSMutableArray *allItems;
 @property (nonatomic, strong) NSTimer *refreshTimer, *checkUserNotificationsTimer;
 @property (nonatomic, strong) Reachability *reachability;
 @property (nonatomic, strong) PreferencesController *preferencesController;
+@property (nonatomic, strong) NewReaderController *nReaderController;
 @property (nonatomic, assign) BOOL menuNeedsRebuild;
 @property (nonatomic, strong) NSMenuItem *lastHighlightedItem; // not retained
 @property (nonatomic, strong) DDHotKeyCenter *hotKeyCenter;
@@ -30,6 +34,9 @@ const int ddLogLevel = LOG_LEVEL_INFO;
 @property (nonatomic, strong) NSTimer *popoverTimer;
 @property (nonatomic, strong) NSPopover *popover;
 @property (nonatomic, strong) NSMenuItem *shimItem;
+
+
+
 @end
 
 @implementation AppDelegate
@@ -107,15 +114,7 @@ const int ddLogLevel = LOG_LEVEL_INFO;
     [self hotKeysChanged];
     [self reachabilityChanged];
     
-#if DEBUG
-    ProcessSerialNumber psn = { 0, kCurrentProcess }; 
-    TransformProcessType(&psn, kProcessTransformToForegroundApplication);
-    [self openPreferences:nil];
-#else
-    // no accounts yet? help you add one
-    if ([Account allAccounts].count <= 0)
-        [self openPreferences:nil];
-#endif
+
 
     [self accountsChanged:nil];
     
@@ -129,6 +128,18 @@ const int ddLogLevel = LOG_LEVEL_INFO;
         NSUserNotification *notification = (aNotification.userInfo)[NSApplicationLaunchUserNotificationKey];
         if (notification) [self userNotificationCenter:nil didActivateNotification:notification];
     }
+    
+#if DEBUG
+    ProcessSerialNumber psn = { 0, kCurrentProcess };
+    TransformProcessType(&psn, kProcessTransformToForegroundApplication);
+    [self openPreferences:nil];
+#else
+    // no accounts yet? help you add one
+    if ([Account allAccounts].count <= 0)
+        [self openPreferences:nil];
+    else
+        [self.openNewReader:nil];
+#endif
 }
 
 - (void)webRequestError:(NSError *)error {
@@ -581,10 +592,15 @@ const int ddLogLevel = LOG_LEVEL_INFO;
 	[self.preferencesController showPreferences];
 }
 
-- (IBAction)openLargeReader:(id)sender {
 
+- (IBAction)openNewReader:(id)sender {
+    if (!self.nReaderController)
+        self.nReaderController = [[NewReaderController alloc]
+                                     initNewReaderController];
+                                  
+        [self.nReaderController showReader];
 }
-
+                                    
 -(IBAction)communitySupport:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://feedsapp.uservoice.com"]];
 }

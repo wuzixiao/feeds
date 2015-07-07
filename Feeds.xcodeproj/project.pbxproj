@@ -182,7 +182,8 @@
 		4DDB2F0218FF310500AD815D /* NSData+ObjectFromJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB2F0118FF310500AD815D /* NSData+ObjectFromJSONData.m */; };
 		4DDB2F05190002B600AD815D /* NSString+ObjectFromJSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB2F04190002B600AD815D /* NSString+ObjectFromJSONString.m */; };
 		4DDB2F08190002CB00AD815D /* NSDictionary+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB2F07190002CB00AD815D /* NSDictionary+JSONString.m */; };
-		E17116EB1B05F3E9007297EB /* ReaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17116EA1B05F3E9007297EB /* ReaderController.m */; };
+		E115F0D01B4B7B56008A05BB /* NewReaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = E115F0CE1B4B7B56008A05BB /* NewReaderController.m */; };
+		E115F0D11B4B7B56008A05BB /* NewReaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E115F0CF1B4B7B56008A05BB /* NewReaderController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -434,8 +435,9 @@
 		4DDB2F04190002B600AD815D /* NSString+ObjectFromJSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ObjectFromJSONString.m"; sourceTree = "<group>"; };
 		4DDB2F06190002CB00AD815D /* NSDictionary+JSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONString.h"; sourceTree = "<group>"; };
 		4DDB2F07190002CB00AD815D /* NSDictionary+JSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONString.m"; sourceTree = "<group>"; };
-		E17116EA1B05F3E9007297EB /* ReaderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderController.m; sourceTree = "<group>"; };
-		E17116EC1B05F42D007297EB /* ReaderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReaderController.h; sourceTree = "<group>"; };
+		E115F0CD1B4B7B56008A05BB /* NewReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewReaderController.h; sourceTree = "<group>"; };
+		E115F0CE1B4B7B56008A05BB /* NewReaderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewReaderController.m; sourceTree = "<group>"; };
+		E115F0CF1B4B7B56008A05BB /* NewReaderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewReaderController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -814,12 +816,13 @@
 			children = (
 				01F616EF13AEAA2400EBB24E /* PreferencesController.h */,
 				01F616F013AEAA2500EBB24E /* PreferencesController.m */,
-				E17116EA1B05F3E9007297EB /* ReaderController.m */,
-				E17116EC1B05F42D007297EB /* ReaderController.h */,
 				01F616F113AEAA2600EBB24E /* PreferencesController.xib */,
 				01D7CB8A13B02F4A001B133A /* CreateAccountController.h */,
 				01D7CB8B13B02F4A001B133A /* CreateAccountController.m */,
 				01D7CB8D13B02F62001B133A /* CreateAccountController.xib */,
+				E115F0CD1B4B7B56008A05BB /* NewReaderController.h */,
+				E115F0CE1B4B7B56008A05BB /* NewReaderController.m */,
+				E115F0CF1B4B7B56008A05BB /* NewReaderController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -991,6 +994,7 @@
 				013B1B4115E8451D008E9ACB /* TrelloAccount@2x.png in Resources */,
 				013B1B4215E8451D008E9ACB /* TrelloNotify.png in Resources */,
 				013B1B4315E8451D008E9ACB /* TrelloNotify@2x.png in Resources */,
+				E115F0D11B4B7B56008A05BB /* NewReaderController.xib in Resources */,
 				013B1B4415E8451D008E9ACB /* UserVoice.png in Resources */,
 				01C79D1519E5B20C00066A74 /* Scholica.png in Resources */,
 				01D73CE819782D4E009E00FA /* BitbucketAccount.png in Resources */,
@@ -1036,6 +1040,7 @@
 				0108CEE013BBA3AC0000ECE1 /* NSString+Base64.m in Sources */,
 				01D4A3BC13C434B400CE07CC /* NSURLRequest+Authorization.m in Sources */,
 				01C359B113C4B6C400D803BD /* HighriseAccount.m in Sources */,
+				E115F0D01B4B7B56008A05BB /* NewReaderController.m in Sources */,
 				01C79CFF19E5B1F200066A74 /* ScholicaAccount.m in Sources */,
 				01B2BE7313C4BBE900304D6A /* NSString+Truncated.m in Sources */,
 				01B2BE7713C4C39B00304D6A /* DribbbleAccount.m in Sources */,
@@ -1064,7 +1069,6 @@
 				0133CEA61530974B00CF6647 /* NSAlert+Foreground.m in Sources */,
 				01BD35E2154D985200170BDD /* ZendeskAccount.m in Sources */,
 				012734BE15DFFB4E00512361 /* RSSAtomAccount.m in Sources */,
-				E17116EB1B05F3E9007297EB /* ReaderController.m in Sources */,
 				013BE6ED15E14F7E0002F51E /* DDFileLogger.m in Sources */,
 				4DDB2F08190002CB00AD815D /* NSDictionary+JSONString.m in Sources */,
 				013BE6EE15E14F7E0002F51E /* DDLog.m in Sources */,
